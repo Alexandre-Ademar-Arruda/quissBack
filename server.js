@@ -7,6 +7,9 @@ const app = express();
 app.use(cors()); // Permite CORS (requisicoes de outras origens)
 app.use(express.json()); // Faz o Express interpretar JSON no body das requisições
 
+console.log('🔗 Conectando no MongoDB URI:', process.env.MONGODB_URI);
+
+
 // Conecta ao banco MongoDB usando URL do .env
 mongoose.connect(process.env.MONGODB_URI, {
   useNewUrlParser: true, // Usa novo parser de URL
