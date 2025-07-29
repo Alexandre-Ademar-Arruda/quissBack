@@ -2,6 +2,8 @@ const express = require('express'); // Importa Express para criar servidor HTTP
 const mongoose = require('mongoose'); // Importa Mongoose para modelar dados MongoDB
 const cors = require('cors'); // Importa CORS para permitir requisições de outras origens
 require('dotenv').config(); // Carrega variáveis do arquivo .env para process.env
+require('./keepAlive');
+
 
 const app = express();
 app.use(cors()); // Permite CORS (requisicoes de outras origens)
